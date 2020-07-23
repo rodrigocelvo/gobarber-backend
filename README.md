@@ -1,15 +1,19 @@
 <h1 align="center">
-    <img alt="GoBarber" src=".github/logo.png" width="200px" />
+    <img alt="GoBarber" src=".github/logo.svg" width="200px" />
 </h1>
 
 <h2 align="center">
     <img alt="GoStack" src=".github/gostack.png" width="200px" />
 </h2>
 
+<h2 align="center">
+    <img alt="preview" src=".github/app.gif" />
+</h2>
+
 <p align="center">
   <a href="#rocket-tecnologias">Tecnologias</a> | 
   <a href="#-projeto">Projeto</a> | 
-  <a href="#-----semana-omnistack-11">Layout</a> | 
+  <a href="#layout">Layout</a> | 
   <a href="#-como-contribuir">Como contribuir</a>
 </p>
 
