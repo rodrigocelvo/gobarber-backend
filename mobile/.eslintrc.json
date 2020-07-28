@@ -12,6 +12,7 @@
   ],
   "globals": {
     "Atomics": "readonly",
+    "__DEV__": "readonly",
     "SharedArrayBuffer": "readonly"
   },
   "parser": "@typescript-eslint/parser",
@@ -40,6 +41,7 @@
     "no-unused-expressions": "off",
     "@typescript-eslint/camelcase": "off",
     "import/no-duplicates": "off",
+    "@typescript-eslint/ban-types": "off",
     "@typescript-eslint/explicit-function-return-type": [
       "error",
       {
