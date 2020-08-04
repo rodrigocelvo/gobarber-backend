@@ -1,6 +1,9 @@
 node_modules/
+dist
 build/
-temp/
+.env
 
+temp/
 tmp/*
 !tmp/.gitkeep
+coverage
