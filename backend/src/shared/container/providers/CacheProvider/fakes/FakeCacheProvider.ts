@@ -1,4 +1,5 @@
 import ICacheProvider from '../models/ICacheProvider';
+import ICacheProviderDTO from '../dtos/ICacheProviderDTO';
 
 interface ICacheData {
   [key: string]: string;
@@ -7,7 +8,7 @@ interface ICacheData {
 export default class FakeCacheProvider implements ICacheProvider {
   private cache: ICacheData = {};
 
-  public async save(key: string, value: string): Promise<void> {
+  public async save({ key, value }: ICacheProviderDTO): Promise<void> {
     this.cache[key] = JSON.stringify(value);
   }
 
