@@ -1,9 +1,11 @@
+.idea/
 node_modules/
-dist
+dist/
 build/
-.env
-
 temp/
+.env
+coverage
+ormconfig.json
+
 tmp/*
 !tmp/.gitkeep
-coverage
