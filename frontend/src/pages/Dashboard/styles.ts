@@ -27,6 +27,11 @@ export const HeaderContent = styled.div`
       color: #999591;
       width: 20px;
       height: 20px;
+      transition: color 0.2s;
+
+      &:hover {
+        color: #e83f5b;
+      }
     }
   }
 `;
@@ -40,6 +45,7 @@ export const Profile = styled.div`
     width: 56px;
     height: 56px;
     border-radius: 50%;
+    object-fit: cover;
   }
 
   div {
@@ -130,6 +136,7 @@ export const NextAppointment = styled.div`
       width: 80px;
       height: 80px;
       border-radius: 50%;
+      object-fit: cover;
     }
 
     strong {

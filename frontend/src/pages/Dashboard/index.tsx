@@ -6,6 +6,8 @@ import 'react-day-picker/lib/style.css';
 
 import { FiPower, FiClock } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
+import avatarPlaceholder from '../../assets/avatar-placeholder.svg';
+
 import {
   Container,
   Header,
@@ -145,7 +147,7 @@ const Dashboard: React.FC = () => {
           <img src={logoImg} alt="GoBarber" />
 
           <Profile>
-            <img src={user.avatar_url} alt={user.name} />
+            <img src={user.avatar_url || avatarPlaceholder} alt={user.name} />
 
             <div>
               <span>Bem vindo(a),</span>
@@ -176,7 +178,7 @@ const Dashboard: React.FC = () => {
 
               <div>
                 <img
-                  src={nextAppointment.user.avatar_url}
+                  src={nextAppointment.user.avatar_url || avatarPlaceholder}
                   alt={nextAppointment.user.name}
                 />
 
@@ -205,7 +207,7 @@ const Dashboard: React.FC = () => {
 
                 <div>
                   <img
-                    src={appointment.user.avatar_url}
+                    src={appointment.user.avatar_url || avatarPlaceholder}
                     alt={appointment.user.name}
                   />
 
@@ -231,7 +233,7 @@ const Dashboard: React.FC = () => {
 
                 <div>
                   <img
-                    src={appointment.user.avatar_url}
+                    src={appointment.user.avatar_url || avatarPlaceholder}
                     alt={appointment.user.name}
                   />
 
