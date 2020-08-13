@@ -39,7 +39,7 @@ interface ProfileFormData {
 }
 
 const Profile: React.FC = () => {
-  const { user, updateUser } = useAuth();
+  const { user, updateUser, signOut } = useAuth();
 
   const formRef = useRef<FormHandles>(null);
   const navigation = useNavigation();
@@ -99,7 +99,7 @@ const Profile: React.FC = () => {
             otherwise: Yup.string(),
           }),
           password_confirmation: Yup.string()
-            .when('old_password', {
+            .when('password', {
               is: val => !!val.legth,
               then: Yup.string().required('Campo obrigatório'),
               otherwise: Yup.string(),
@@ -176,7 +176,11 @@ const Profile: React.FC = () => {
             </BackButon>
 
             <UserAvatarButton onPress={handleUpdateAvatar}>
-              <UserAvatar source={{ uri: user.avatar_url }} />
+              <UserAvatar
+                source={{
+                  uri: user.avatar_url || 'https://i.imgur.com/64B6f7f.png',
+                }}
+              />
             </UserAvatarButton>
 
             <View>
@@ -251,6 +255,13 @@ const Profile: React.FC = () => {
                 Atualizar perfil
               </Button>
             </Form>
+
+            <Button
+              onPress={signOut}
+              style={{ marginTop: 16, backgroundColor: '#e83f5b' }}
+            >
+              Sair
+            </Button>
           </Container>
         </ScrollView>
       </KeyboardAvoidingView>

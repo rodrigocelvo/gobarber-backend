@@ -60,7 +60,11 @@ const Dashboard: React.FC = () => {
         </HeaderTitle>
 
         <ProfileButton onPress={navigateToProfile}>
-          <UserAvatar source={{ uri: user.avatar_url }} />
+          <UserAvatar
+            source={{
+              uri: user.avatar_url || 'https://i.imgur.com/64B6f7f.png',
+            }}
+          />
         </ProfileButton>
       </Header>
       <ProvidersList
@@ -73,7 +77,11 @@ const Dashboard: React.FC = () => {
           <ProviderContainer
             onPress={() => navigateToCreateAppointment(provider.id)}
           >
-            <ProviderAvatar source={{ uri: provider.avatar_url }} />
+            <ProviderAvatar
+              source={{
+                uri: provider.avatar_url || 'https://i.imgur.com/64B6f7f.png',
+              }}
+            />
 
             <ProviderInfo>
               <ProviderName>{provider.name}</ProviderName>
